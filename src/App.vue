@@ -1,5 +1,5 @@
 <template>
-  <div style="width: 25%; position: absolute;top: 45%;left: 50%;-ms-transform: translateX(-50%) translateY(-50%);-webkit-transform: translate(-50%,-50%);transform: translate(-50%,-50%); border-color:green ">
+  <div style="width: 75%; position: absolute;top: 45%;left: 50%;-ms-transform: translateX(-50%) translateY(-50%);-webkit-transform: translate(-50%,-50%);transform: translate(-50%,-50%); border-color:green ">
     Algorithm:   {{alg}}
     <br>
     <button @click="shuffle()">shuffle</button>

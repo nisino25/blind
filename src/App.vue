@@ -62,9 +62,8 @@ export default {
         }
 
       }
+      this.alg = this.alg.toUpperCase()
 
-      
-      console.log('yos')
     }
   },
   created() {

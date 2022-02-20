@@ -1,5 +1,9 @@
 <template>
-  alg:{{alg}}
+  <div style="width: 25%; position: absolute;top: 45%;left: 50%;-ms-transform: translateX(-50%) translateY(-50%);-webkit-transform: translate(-50%,-50%);transform: translate(-50%,-50%); border-color:green ">
+    Algorithm:   {{alg}}
+    <br>
+    <button @click="shuffle()">shuffle</button>
+  </div>
 </template>
 
 
@@ -40,12 +44,22 @@ export default {
   },
   methods:{
     shuffle(){
-      this.list = ['q','w','e','r','t','u','i','o','p','a','s','d','f','g','h','j','k','l','x','c','v','n']
+      this.alg = ''
+      this.list = ['q','w','e','r','t','u','i','o','p','a','b','s','d','f','g','h','j','k','l','x','c','v','n','m']
+      let lastnum = 100
 
 
       for (var i=1;i<=10; i++) {
-        this.alg = this.alg + ': : '
-        console.log(this.list.length)
+        let randomnum = Math.floor(Math.random() * 24)
+        if(randomnum == lastnum ){
+          i--
+        }else{
+          this.alg = this.alg + this.list[randomnum]
+          lastnum = randomnum
+          if(i % 2 === 0  ){
+            this.alg = this.alg + ': '
+          }
+        }
 
       }
 

@@ -32,3 +32,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 # blind2
 # blind
 # blindcube
+# blind
